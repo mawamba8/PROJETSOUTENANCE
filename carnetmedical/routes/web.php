@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MedecinController;
 use App\Http\Controllers\PatientController;
-use App\Http\Controllers\RendezvousController;
+use App\Http\Controllers\Rendez_VousController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\TraitementController;
 use App\Http\Controllers\Carnet_MedicalController;
@@ -34,8 +34,8 @@ Route::post('/medecins',[MedecinController::class,'store'])->name('medecins.stor
 Route::get('/patients',[PatientController::class,'index'])->name('patients.index');
 Route::post('/patients',[PatientController::class,'store'])->name('patients.store');
 
-Route::get('/rendezvous',[RendezvousController::class,'index'])->name('rendezvous.index');
-Route::post('/rendezvous',[RendezvousController::class,'store'])->name('rendezvous.store');
+Route::get('/rendezvous',[Rendez_VousController::class,'index'])->name('rendezvous.index');
+Route::post('/rendezvous',[Rendez_VousController::class,'store'])->name('rendezvous.store');
 
 Route::get('/consultations',[ConsultationController::class,'index'])->name('consultations.index');
 Route::post('/consultations',[ConsultationController::class,'store'])->name('consultations.store');

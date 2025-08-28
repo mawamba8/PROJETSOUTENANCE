@@ -7,7 +7,7 @@ use App\Models\Patient;
 use App\Models\Medecin;
 use Illuminate\Http\Request;
 
-class RendezvousController extends Controller
+class Rendez_VousController extends Controller
 {
       public function index()
     {
@@ -36,12 +36,12 @@ class RendezvousController extends Controller
         return redirect()->route('rendezvous.index')->with('success', 'Rendez-vous créé avec succès');
     }
 
-     public function index(RendezVous $rendezvous)
+    /* public function index(RendezVous $rendezvous)
     {
         return view('rendezvous.index', compact('rendezvous'));
-    }
+    }*/
 
-    public function show(RendezVous $rendezvou)
+    public function show(RendezVous $rendezvous)
     {
         return view('rendezvous.show', compact('rendezvous'));
     }
